@@ -54,7 +54,7 @@ initialize_calendar = function() {
              }
            };
            $.ajax({
-               url: appointment.url + '.js',
+               url: appointment.base_url + '.js',
                type: 'PATCH',
                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
                data: appointment_data,
