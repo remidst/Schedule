@@ -81,6 +81,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
+    ice_cube (0.16.2)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -194,6 +195,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   fullcalendar-rails
   fullcalendar_engine
+  ice_cube
   jbuilder (~> 2.5)
   jquery-rails
   momentjs-rails

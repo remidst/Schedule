@@ -33,6 +33,7 @@
 
   <div class="actions">
     <%= form.submit %>
+    <%= link_to 'New Recurring Appointment', new_recurring_appointment_path, class: 'btn btn-default', remote: true if appointment.new_record? %>
     <%= link_to 'Delete', appointment, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure?'}, remote: true unless appointment.new_record? %>
   </div>
 <% end %>

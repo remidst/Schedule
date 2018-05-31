@@ -37,7 +37,7 @@ initialize_calendar = function() {
       editable: true,
       eventLimit: true,
 
-      events: '/appointments.json',
+      eventSources: ['/appointments.json', '/recurring_appointments.json'],
 
       select: function(start, end) {
         $.getScript('/appointments/new', function() {});
