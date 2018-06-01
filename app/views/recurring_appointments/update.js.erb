@@ -1,7 +1,8 @@
 $('.calendar').fullCalendar('removeEvents', '<%= "recurring_#{@recurring_appointment.id}" %>');
 $('.modal').modal('hide');
+alert($.parseJson("<%= j render partial: 'recurring_appointments/recurring_appointment.json', locals: {recurring_appointment: @recurring_appointment} %>");
 $('.calendar').fullCalendar(
   'renderEvents', 
-  $.parseJSON("<%= j render('recurring_appointments/recurring_appointment.json') %>"), 
+  $.parseJSON("<%= j render partial: 'recurring_appointments/recurring_appointment.json', locals: {recurring_appointment: @recurring_appointment} %>"), 
   true
 );
