@@ -1,9 +1,8 @@
 $('.calendar').fullCalendar('removeEvents', '<%= "appointment_#{@appointment.id}" %>' );
-alert($.parseJson("<%= j render partial: 'appointments/appointment.json', locals: {appointment: @appointment} %>");
+$('.modal').modal('hide');
 
 $('.calendar').fullCalendar(
   'renderEvent', 
-  $.parseJSON("<%= j render partial: @appointment, formats: :json, locals: {appointment: @appointment}  %>"), 
+  $.parseJSON("<%= j render(partial: @appointment, formats: :json, locals: {appointment: @appointment}).html_safe  %>"), 
   true
 );
-$('.modal').modal('hide');
